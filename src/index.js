@@ -11,14 +11,12 @@ app.use(cors());
 app.use(express.json());
 
 // Local MongoDB URI
-const MONGODB_URI = 'mongodb+srv://boomtanapon030:P1eKvGwg2fm7VRXt@tanapon.tknboue.mongodb.net/urlShortener';
+const MONGODB_URI = 'mongodb+srv://boomtanapon030:Mr0613297628@tanapon.ti3hepm.mongodb.net/';
 
 // MongoDB Connection
-mongoose.connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => console.log('Connected to local MongoDB'))
-  .catch(err => console.error('Could not connect to MongoDB', err));
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB connection successful'))
+  .catch((err) => console.error('MongoDB connection error:', err));
 
 // Routes
 app.post('/api/shorten', async (req, res) => {
