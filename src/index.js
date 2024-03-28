@@ -14,7 +14,7 @@ app.use(express.json());
 const MONGODB_URI = 'mongodb+srv://boomtanapon030:Mr0613297628@tanapon.ti3hepm.mongodb.net/';
 
 // MongoDB Connection
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(MONGODB_URI)
   .then(() => console.log('MongoDB connection successful'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
